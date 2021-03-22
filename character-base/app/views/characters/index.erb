@@ -1,0 +1,17 @@
+<h2>Look At Your Characters! Wow:</h2>
+
+<table>
+  <th>Characters:</th>
+  <tr>
+    <% @characters.each do |character| %>
+    <ul>
+        <li><%=character.name%></li>
+        <li><%=character.age%></li>
+      </ul>
+     </tr> </td>
+  <% end %>
+</table>
+<br>
+
+<a class="button" href="characters/new">Create New Character</a>
+<a class="button" href="/">Home</a>
