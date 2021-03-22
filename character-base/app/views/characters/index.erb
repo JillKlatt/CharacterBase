@@ -5,8 +5,10 @@
   <tr>
     <% @characters.each do |character| %>
     <ul>
-        <li><%=character.name%></li>
-        <li><%=character.age%></li>
+        <li>
+        <td ><a href="/characters/<%= character.id %>"><%= character.name %></a></td>
+        <!--Maybe somehow put date created?-->
+        </li>
       </ul>
      </tr> </td>
   <% end %>

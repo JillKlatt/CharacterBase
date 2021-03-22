@@ -20,7 +20,8 @@ class CharactersController < Sinatra::Base
 
     post '/characters' do
         puts params
-        @character = Character.create(params)
+        @character = Character.new(params["character"])
+        @character.save
         redirect to "/characters"
     end
 
@@ -39,7 +40,7 @@ class CharactersController < Sinatra::Base
         @character.name = params[:name]
         @character.age = params[:age]
         @character.race = params[:race]
-        @character.class = params[:class]
+        @character.class_name = params[:class_name]
         @character.special_abilities = params[:special_abilities]
         @cahracter.description = params[:description]
         @character.save
