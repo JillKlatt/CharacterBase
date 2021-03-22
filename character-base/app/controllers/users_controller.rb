@@ -1,6 +1,6 @@
 require './config/environment'
 
-class UsersController < Sinatra::Base
+class UsersController < ApplicationController
 
     configure do 
     set :views, 'app/views'
