@@ -7,7 +7,7 @@ class ApplicationController < Sinatra::Base
     #set :views, Proc.new { File.join(root, "../views/") }
     set :views, 'app/views'
     enable :sessions
-    set :session_secret, ENV['SESSION_SECRET']
+    set :session_secret, "secret"
   end
 
   get "/" do
@@ -31,7 +31,6 @@ class ApplicationController < Sinatra::Base
       redirect '/login' if !logged_in
     end
   end
-
 
 
 end
