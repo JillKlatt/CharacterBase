@@ -1,1 +1,24 @@
 <h2>Edit Your Character Here:</h2>
+
+<form action="/characters/<%= @character.id%>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+<label>Character Name:</label>
+<input type="text" id="name" name="character[name]" value="<%=@character.name%>">
+<br>
+
+<label>Age:</label>
+<input type="text" id=age name="character[age]" value="<%=@character.age%>">
+<br>
+<label>Class:</label>
+<br>
+<label for="bard">Bard</label>
+<input type="checkbox" id="class_name" name="character[class_name]" value="Bard">
+<label for="bard">Druid</label>
+<input type="checkbox" id="class_name" name="character[class_name]" value="Druid">
+<label for="bard">Ranger</label>
+<input type="checkbox" id="class_name" name="character[class_name]" value="Ranger">
+<br>
+  <input type="submit" value="Update Character">
+
+  </form>
