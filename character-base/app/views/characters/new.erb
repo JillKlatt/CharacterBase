@@ -3,14 +3,22 @@
 <form action="/characters" method="post">
 <label>Character Name:</label>
 <input type="text" id="name" name="character[name]">
+<br>
 
 <label>Age:</label>
 <input type="text" id="age" name="character[age]">
+<br>
 
 <label>Class:</label>
-<input type="checkbox" id="class" name="character[class]" value="Bard">
-<input type="checkbox" id="class" name="character[class]" value="Druid">
-<input type="checkbox" id="class" name="character[class]" value="Ranger">
+<br>
+<label for="bard">Bard</label>
+<input type="checkbox" id="class" name="character[class_name]" value="Bard">
+<label for="bard">Druid</label>
+<input type="checkbox" id="class" name="character[class_name]" value="Druid">
+<label for="bard">Ranger</label>
+<input type="checkbox" id="class" name="character[class_name]" value="Ranger">
+
+
 
   <input type="submit" value="Create New Character">
 </form>

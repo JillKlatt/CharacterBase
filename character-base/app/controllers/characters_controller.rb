@@ -2,10 +2,15 @@ require './config/environment'
 
 class CharactersController < Sinatra::Base
 
-    get '/characters' do 
-        redirect_if_not_logged_in
+    configure do 
+        set :views, 'app/views'
+    end
 
-        @characters = current_user.characters
+    get '/characters' do 
+        #redirect_if_not_logged_in
+
+        #@characters = current_user.characters
+        @characters = Character.all
         erb :'characters/index'
     end
 
@@ -13,14 +18,20 @@ class CharactersController < Sinatra::Base
         erb :'characters/new'
     end
 
-    post '/characters/new' do
+    post '/characters' do
+        puts params
         @character = Character.create(params)
-        redirect to "/characters/#{@character.id}"
+        redirect to "/characters"
     end
 
     get '/characters/:id' do 
         @character = Character.find_by_id(params[:id])
-        erb :show
+        erb :'characters/show'
+    end
+
+    get '/characters/:id/edit' do
+        @character = Character.find_by_id(params[:id])
+        erb :'characters/edit'
     end
 
     patch '/characters/:id' do
