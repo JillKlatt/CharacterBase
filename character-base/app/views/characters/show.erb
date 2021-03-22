@@ -2,11 +2,11 @@
 
 <h3>Character Name: <%=@character.name%></h3>
 <br>
-<h4>Character Age: <%=@character.age%></h4>
+<h4>Age: <%=@character.age%></h4>
 <br>
-<h4>Character Race: <%=@character.race%></h4>
+<h4>Race: <%=@character.race%></h4>
 <br>
-<h4>Character Class: <%=@character.class_name%></h4>
+<h4>Class: <%=@character.class_name%></h4>
 <br>
 <h4>Special Abilities: <%=@character.special_abilities%></h4>
 <br>
@@ -16,13 +16,20 @@
 <%=@character.description%>
 </p>
 
-<h2>
+
+<br>
+
+<form  action="/characters/<%=@character.id%>" method='post'>
+  <input type="hidden" name="_method" value="delete" />
+  <input type="submit" value="Delete This Character" />
+<br>
 <br>
 <br>
 <br>
 <a class="button" href="/characters/<%=@character.id%>/edit">Edit This Character</a>
 <br>
 <br>
+
 <a class="button" href="/characters/new">Create New Character</a>
 <br>
 <br>
