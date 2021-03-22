@@ -4,16 +4,54 @@
 <label>Character Name:</label>
 <input type="text" id="name" name="character[name]">
 <br>
+<br>
 
 <label>Age:</label>
 <input type="text" id="age" name="character[age]">
 <br>
+<br>
+
+<style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+
 
 <label>Class:</label>
 <br>
-<label for="bard">Bard</label>
+<div class="dropdown">
+<span><label for="bard">Bard</label></span>
+  <div class="dropdown-content">
+    <p>The "look at me girl" in all of us</p>
+    </div>
+</div>
 <input type="checkbox" id="class_name" name="character[class_name]" value="Bard">
-<label for="druid">Druid</label>
+
+
+<!--Don't understand formatting
+
+  <div class="dropdown-content">
+    <p>Probz the best</p>
+    </div>
+</div>
+-->
+<span><label for="druid">Druid</label></span>
 <input type="checkbox" id="class_name" name="character[class_name]" value="Druid">
 <label for="ranger">Ranger</label>
 <input type="checkbox" id="class_name" name="character[class_name]" value="Ranger">
@@ -32,7 +70,10 @@
 <label for="sorcerer">Sorcerer</label>
 <input type="checkbox" id="class_name" name="character[class_name]" value="Sorcerer">
 
+<br><br>
+
 <label>Race:</label>
+<br>
 <label for="human">Human</label>
 <input type="checkbox" id="race" name="character[race]" value="Human">
 <label for="dwarf">Dwarf</label>
@@ -47,13 +88,15 @@
 <input type="checkbox" id="race" name="character[race]" value="Half-Elf">
 <label for="Half-Orc">Half-Orc</label>
 <input type="checkbox" id="race" name="character[race]" value="Half-Orc">
+<br><br>
 
 <label>Special Abilities:</label>
-<input type="text" id="race" name="character[special_abilites]">
+<input type="text" id="race" name="character[special_abilities]">
+<br><br>
 
 <label>Description:</label>
 <textarea id="description" name=character[description]>
-
+</textarea><br>
 
   <input type="submit" value="Create New Character">
 </form>
