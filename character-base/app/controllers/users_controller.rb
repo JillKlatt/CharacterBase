@@ -39,7 +39,7 @@ class UsersController < ApplicationController
             end
     end
 
-    delete '/logout' do
+    get '/logout' do
         redirect_if_not_logged_in
         session.delete("user_id")
         redirect '/login'

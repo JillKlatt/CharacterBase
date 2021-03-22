@@ -6,3 +6,4 @@ class SessionsController < ApplicationController
 #     erb :'sessions/new'
 
 # end
+end

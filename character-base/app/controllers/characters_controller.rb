@@ -41,4 +41,10 @@ class CharactersController < ApplicationController
         @character.save
         redirect to "/characters/#{@character.id}"
     end
+
+    delete '/characters/:id' do 
+        @character = Character.find_by_id(params[:id])
+        @character.destroy
+        redirect to '/characters'
+    end
 end
