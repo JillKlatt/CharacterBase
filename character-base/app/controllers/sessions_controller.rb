@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
             end
     end
 
-    get '/logout' do
+    delete '/logout' do
         redirect_if_not_logged_in
         session.delete("user_id")
         redirect '/login'

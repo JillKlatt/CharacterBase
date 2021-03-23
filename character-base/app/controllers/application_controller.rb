@@ -16,10 +16,12 @@ class ApplicationController < Sinatra::Base
 
   helpers do
     def current_user
+      #make a memo rather than go back to long form every time
       @current_user ||= User.find_by_id(session["user_id"])
     end
 
     def logged_in?
+      #is current user valid
       !!current_user
     end
 
