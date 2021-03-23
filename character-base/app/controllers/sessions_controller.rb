@@ -1,3 +1,5 @@
+require './config/environment'
+
 class SessionsController < ApplicationController
 
     get '/login' do

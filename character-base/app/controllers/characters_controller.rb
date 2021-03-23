@@ -7,35 +7,49 @@ class CharactersController < ApplicationController
     end
 
     get '/characters' do 
-        #redirect_if_not_logged_in
+        redirect_if_not_logged_in
 
-        #@characters = current_user.characters
-        @characters = Character.all
+        @characters = current_user.characters
         erb :'characters/index'
     end
 
     get '/characters/new' do
+        redirect_if_not_logged_in
+
         erb :'characters/new'
     end
 
     post '/characters' do
-        puts params
-        @character = Character.new(params["character"])
-        @character.save
-        redirect to "/characters"
+        redirect_if_not_logged_in
+        #puts params
+        # @character = Character.new(params["character"])
+        # @character.save
+        #character = current_user.characters.build([params["character"]])
+        new_character = Character.new(params[:character])
+        new_character.user_id = current_user.id
+        #binding.pry
+        if new_character.save
+            redirect "/characters/#{new_character.id}"
+        else
+            #Error message
+            redirect to "/characters/new"
+        end
     end
 
     get '/characters/:id' do 
+        redirect_if_not_authorized
         @character = Character.find_by_id(params[:id])
         erb :'characters/show'
     end
 
     get '/characters/:id/edit' do
+        redirect_if_not_authorized
         @character = Character.find_by_id(params[:id])
         erb :'characters/edit'
     end
 
     patch '/characters/:id' do
+        redirect_if_not_authorized
         @character = Character.find_by_id(params[:id])
         @character.update(params[:character])
         @character.save
@@ -43,6 +57,7 @@ class CharactersController < ApplicationController
     end
 
     delete '/characters/:id' do 
+        redirect_if_not_authorized
         @character = Character.find_by_id(params[:id])
         @character.destroy
         redirect to '/characters'
@@ -53,7 +68,7 @@ class CharactersController < ApplicationController
     def redirect_if_not_authorized
         @character = Character.find_by_id(params[:id])
         if @character.user_id != session["user_id"]
-            redirect "/character"
+            redirect "/characters"
         end
     end
 end
