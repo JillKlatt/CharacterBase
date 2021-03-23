@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
 
     get '/login' do
         redirect_if_already_logged_in
-        erb :'users/login'
+        erb :'sessions/login'
     end
 
     post '/login' do 

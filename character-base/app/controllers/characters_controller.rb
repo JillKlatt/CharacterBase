@@ -47,4 +47,13 @@ class CharactersController < ApplicationController
         @character.destroy
         redirect to '/characters'
     end
+
+    private
+
+    def redirect_if_not_authorized
+        @character = Character.find_by_id(params[:id])
+        if @character.user_id != session["user_id"]
+            redirect "/character"
+        end
+    end
 end
