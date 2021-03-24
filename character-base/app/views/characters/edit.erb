@@ -10,46 +10,22 @@
 <label>Age:</label>
 <input type="text" id=age name="character[age]" value="<%=@character.age%>">
 <br>
+
+
 <label>Class:</label>
 <br>
-<label for="bard">Bard</label>
-<input type="checkbox" id="class_name" name="character[class_name]" value="Bard">
-<label for="druid">Druid</label>
-<input type="checkbox" id="class_name" name="character[class_name]" value="Druid">
-<label for="ranger">Ranger</label>
-<input type="checkbox" id="class_name" name="character[class_name]" value="Ranger">
-<label for="bardbarian">Barbarian</label>
-<input type="checkbox" id="class_name" name="character[class_name]" value="Barbarian">
-<label for="cleric">Cleric</label>
-<input type="checkbox" id="class_name" name="character[class_name]" value="Cleric">
-<label for="fighter">Fighter</label>
-<input type="checkbox" id="class_name" name="character[class_name]" value="Fighter">
-<label for="rogue">Rogue</label>
-<input type="checkbox" id="class_name" name="character[class_name]" value="Rogue">
-<label for="wizard">Wizard</label>
-<input type="checkbox" id="class_name" name="character[class_name]" value="Wizard">
-<label for="monk">Monk</label>
-<input type="checkbox" id="class_name" name="character[class_name]" value="Monk">
-<label for="sorcerer">Sorcerer</label>
-<input type="checkbox" id="class_name" name="character[class_name]" value="Sorcerer">
-<br><br>
+<%@classes.each do |class_name|%>
+<label for="<%class_name%>"><%=class_name%></label>
+<input type="checkbox" id="class_name" name="character[class_name]" value= "<%=class_name%>">
+<%end%>
+<br>
 
 <label>Race:</label>
 <br>
-<label for="human">Human</label>
-<input type="checkbox" id="race" name="character[race]" value="Human">
-<label for="dwarf">Dwarf</label>
-<input type="checkbox" id="race" name="character[race]" value="Dwarf">
-<label for="elf">Elf</label>
-<input type="checkbox" id="race" name="character[race]" value="Elf">
-<label for="gnome">Gnome</label>
-<input type="checkbox" id="race" name="character[race]" value="Gnome">
-<label for="halfling">Halfling</label>
-<input type="checkbox" id="race" name="character[race]" value="Halfing">
-<label for="Half-Elf">Half-Elf</label>
-<input type="checkbox" id="race" name="character[race]" value="Half-Elf">
-<label for="Half-Orc">Half-Orc</label>
-<input type="checkbox" id="race" name="character[race]" value="Half-Orc">
+<%@races.each do |race|%>
+<label for="<%race%>"><%=race%></label>
+<input type="checkbox" id="race" name="character[race]" value= "<%=race%>">
+<%end%>
 <br><br>
 
 <label>Special Abilities:</label>

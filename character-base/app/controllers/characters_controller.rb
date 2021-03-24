@@ -50,6 +50,8 @@ class CharactersController < ApplicationController
 
     get '/characters/:id/edit' do
         redirect_if_not_authorized
+        @classes = ["Bard", "Druid", "Ranger", "Barbarian", "Cleric", "Fighter", "Rogue", "Wizard", "Monk", "Sorcerer"]
+        @races = ["Human", "Dwarf", "Elf", "Gnome", "Halfling", "Half-Elf", "Half-Orc"]
         @character = Character.find_by_id(params[:id])
         erb :'characters/edit'
     end
