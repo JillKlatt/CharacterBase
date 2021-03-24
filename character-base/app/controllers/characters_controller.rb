@@ -25,14 +25,19 @@ class CharactersController < ApplicationController
         # @character = Character.new(params["character"])
         # @character.save
         #character = current_user.characters.build([params["character"]])
-        new_character = Character.new(params[:character])
-        new_character.user_id = current_user.id
-        #binding.pry
-        if new_character.save
-            redirect "/characters/#{new_character.id}"
-        else
-            #Error message
+        if params[:character][:name] == ""
+            #Message about needing to fill in name
             redirect to "/characters/new"
+        else
+            new_character = Character.new(params[:character])
+            new_character.user_id = current_user.id
+        #binding.pry
+            if new_character.save
+                redirect "/characters/#{new_character.id}"
+            else
+            #Error message
+                redirect to "/characters/new"
+            end
         end
     end
 
