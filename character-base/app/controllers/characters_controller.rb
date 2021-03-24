@@ -15,7 +15,8 @@ class CharactersController < ApplicationController
 
     get '/characters/new' do
         redirect_if_not_logged_in
-
+        @classes = ["Bard", "Druid", "Ranger", "Barbarian", "Cleric", "Fighter", "Rogue", "Wizard", "Monk", "Sorcerer"]
+        @races = ["Human", "Dwarf", "Elf", "Gnome", "Halfling", "Half-Elf", "Half-Orc"]
         erb :'characters/new'
     end
 
