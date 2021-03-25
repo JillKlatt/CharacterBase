@@ -32,8 +32,8 @@ class CharactersController < ApplicationController
         if new_character.save
             redirect "/characters/#{new_character.id}"
         else
-            # Error message
-            redirect to "/characters/new"
+            "Error #{new_character.errors.full_messages.join(", ")}"
+            #redirect to "/characters/new"
         end
     end
 
