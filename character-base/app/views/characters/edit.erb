@@ -16,25 +16,28 @@
 <br>
 <%@classes.each do |class_name|%>
 <label for="<%class_name%>"><%=class_name%></label>
-<input type="checkbox" id="class_name" name="character[class_name]" value= "<%=class_name%>">
+<input type="radio" id="class_name" name="character[class_name]" value= "<%=class_name%>">
 <%end%>
+<br>
 <br>
 
 <label>Race:</label>
 <br>
 <%@races.each do |race|%>
 <label for="<%race%>"><%=race%></label>
-<input type="checkbox" id="race" name="character[race]" value= "<%=race%>">
+<input type="radio" id="race" name="character[race]" value= "<%=race%>">
 <%end%>
-<br><br>
+<br>
+<br>
 
 <label>Special Abilities:</label>
 <input type="text" id="race" name="character[special_abilities]" value="<%=@character.special_abilities%>">
 <br><br>
 
 <label>Description:</label>
-<textarea id="description" name=character[description] value="<%=@character.description%>">
+<textarea rows="4" cols="50" id="description" name=character[description]>
 </textarea><br>
+<br><br>
   <input type="submit" value="Update Character">
 
   </form>
