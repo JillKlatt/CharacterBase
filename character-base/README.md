@@ -20,8 +20,8 @@ Bug reports and inquiries are welcome at: https://github.com/JillKlatt/FlatironP
 Character informtaion pulled from: [Classes]https://en.wikipedia.org/wiki/Character_class_(Dungeons_%26_Dragons) and [Races](https://dungeonsdragons.fandom.com/wiki/Race#:~:text=D%26D%203rd%20edition,elf%2C%20and%20half%2Dorc.)
 
 ### Code of Conduct
-[CODE-OF-CONDUCT](https://github.com/JillKlatt/cocktail-choices-phase1/blob/main/CODE-OF-CONDUCT.md)
+[CODE-OF-CONDUCT](https://github.com/JillKlatt/FlatironPhase2Project/blob/main/character-base/CODE-OF-CONDUCT.md)
 
 ### License information
-[LICENSE](https://github.com/JillKlatt/cocktail-choices-phase1/blob/main/LICENSE)
+[LICENSE](https://github.com/JillKlatt/FlatironPhase2Project/blob/main/character-base/LICENSE)
 
