@@ -14,7 +14,7 @@ Run ```bundle install```
 Run ```shotgun``` and use localhost:9393 on your browser
 
 ### Sample Demo Video:
-A brief description of this program's capabilities is available [here](https://youtu.be/INSERT VIDEO HERE.
+A brief description of this program's capabilities is available [here](https://www.loom.com/share/440b64a1af284b43a1eefcf6b5d323a4)
  
 ### Contributor Guide
 Bug reports and inquiries are welcome at: https://github.com/JillKlatt/FlatironPhase2Project
