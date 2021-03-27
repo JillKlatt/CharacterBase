@@ -9,6 +9,8 @@ Jill Klatt Flatiron Phase 2 CLI Project
 ### Install Instructions:
 Fork and clone this repo
 <br />
+Navigate to FlatironPhase2Project/character-base$
+<br />
 Run ```bundle install```
 <br />
 Run ```shotgun``` and use localhost:9393 on your browser
