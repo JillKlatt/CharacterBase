@@ -22,9 +22,7 @@ class CharactersController < ApplicationController
 
     post '/characters' do
         redirect_if_not_logged_in
-        #puts params
-        # @character = Character.new(params["character"])
-        # @character.save
+  
         #character = current_user.characters.build([params["character"]])
         new_character = Character.new(params[:character])
         new_character.user_id = current_user.id
@@ -32,8 +30,8 @@ class CharactersController < ApplicationController
         if new_character.save
             redirect "/characters/#{new_character.id}"
         else
-            "Error #{new_character.errors.full_messages.join(", ")}"
-            #redirect to "/characters/new"
+            flash[:error] = "#{new_character.errors.full_messages.join(", ")}"
+            redirect to "/characters/new"
         end
     end
 
