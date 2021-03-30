@@ -14,6 +14,11 @@ class ApplicationController < Sinatra::Base
     erb :welcome
   end
 
+  error ParamXMissingError do
+    status 400
+    erb :'users/custom_error_page'
+  end
+
   helpers do
     def current_user
       #make a memo rather than go back to long form every time
