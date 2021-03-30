@@ -1,9 +1,8 @@
 <%if @characters.count < 1%>
-<h2>No Characters yet, Start creating:</h2>
+<h2>No Characters yet! Start creating:</h2>
 <%else%>
 
 <h2>Look At Your Characters! Wow:</h2>
-<%end%>
 
 <table>
   <th>Characters:</th>
@@ -18,7 +17,11 @@
      </tr> </td>
   <% end %>
 </table>
+<%end%>
 <br>
 
-<a class="button" href="/characters/new">Create New Character</a>
-<a class="button" href="/">Home</a>
+
+<a button type="button" class="btn btn-outline-success" href="/characters/new">Create New Character</a>
+<br>
+<br>
+<a button type="button" class="btn btn-outline-info" href="/">Home</button></a>
