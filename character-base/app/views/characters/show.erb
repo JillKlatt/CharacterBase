@@ -19,19 +19,18 @@
 
 <br>
 
+<div class="center">
 <form  action="/characters/<%=@character.id%>" method='post'>
   <input type="hidden" name="_method" value="delete" />
   <input type="submit" button type="button" class="btn btn-outline-danger" value="Delete This Character" />
-<br>
-<br>
+  </form>
+  <br>
+
 <a button type="button" class="btn btn-outline-warning" href="/characters/<%=@character.id%>/edit">Edit This Character</button></a>
-<br>
-<br>
+
 <a button type="button" class="btn btn-outline-info" href="/characters/new">Create New Character</a>
-<br>
-<br>
+
 <a button type="button" class="btn btn-outline-success" href="/characters">View All Characters</a>
-<br>
-<br>
+
 <a button type="button" class="btn btn-outline-dark" href="/">Home</a>
 </div>

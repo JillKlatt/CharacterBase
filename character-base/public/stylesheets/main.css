@@ -20,6 +20,8 @@
     font-family: Georgia;
   }
 
+
+
   .wrapper {
     background: rgb(227, 233, 178);
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -293,6 +295,7 @@ a{
   display: inline-block;
   font-size: 16px;
 }
+
 
 
 }
