@@ -14,10 +14,14 @@ class ApplicationController < Sinatra::Base
     erb :welcome
   end
 
-  error ParamXMissingError do
-    status 400
-    erb :'users/custom_error_page'
+  not_found do
+    status 404
+    erb :error
   end
+
+  #error 404 do
+  #  redirect '/'
+  #end
 
   helpers do
     def current_user
