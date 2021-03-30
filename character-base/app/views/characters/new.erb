@@ -1,46 +1,27 @@
 <h2>Create A New Character:</h2>
 
 <form action="/characters" method="post">
-<label>Character Name:</label>
+<b><label>Character Name:</label></b>
 <input type="text" id="name" name="character[name]">
 <br>
 <br>
 
-<label>Age:</label>
+<b><label>Age:</label></b>
 <input type="text" id="age" name="character[age]">
 <br>
 <br>
 
 
-<label>Class:</label>
+<b><label>Class:</label></b>
 <br>
 <%@classes.each do |class_name|%>
 <label for="<%class_name%>"><%=class_name%></label>
 <input type="radio" id="class_name" name="character[class_name]" value= "<%=class_name%>">
 <%end%>
-<!--
-<div class="dropdown">
-<span><label for="bard">Bard</label></span>
-<input type="checkbox" id="class_name" name="character[class_name]" value="Bard">
-  <div class="dropdown-content">
-    <p>The "look at me girl" in all of us</p>
-    </div>
-</div>
+<br>
+<br>
 
--->
-
-
-<!--Don't understand formatting
-
-  <div class="dropdown-content">
-    <p>Probz the best</p>
-    </div>
-</div>
-
--->
-<br><br>
-
-<label>Race:</label>
+<b><label>Race:</label></b>
 <br>
 <%@races.each do |race|%>
 <label for="<%race%>"><%=race%></label>
@@ -50,14 +31,16 @@
 <br>
 
 
-<label>Special Abilities:</label>
+<b><label>Special Abilities:</label></b>
 <input type="text" id="race" name="character[special_abilities]">
-<br><br>
+<br>
+<br>
 
-<label>Description:</label>
+<b><label>Description:</label></b>
 <textarea rows="4" cols="50" id="description" name=character[description]>
 </textarea><br>
-<br><br>
+<br>
+<br>
 
   <input type="submit" value="Create New Character">
   <br>

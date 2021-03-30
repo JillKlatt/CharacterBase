@@ -3,38 +3,44 @@
 <form action="/characters/<%= @character.id%>" method="post">
   <input type="hidden" name="_method" value="patch">
 
-<label>Character Name:</label>
+<b><label>Character Name:</label></b>
 <input type="text" id="name" name="character[name]" value="<%=@character.name%>">
 <br>
+<br>
 
-<label>Age:</label>
+<b><label>Age:</label></b>
 <input type="text" id=age name="character[age]" value="<%=@character.age%>">
+<br>
 <br>
 
 
-<label>Class:</label>
+<b><label>Class:</label></b>
 <br>
 <%@classes.each do |class_name|%>
 <label for="<%class_name%>"><%=class_name%></label>
 <input type="radio" id="class_name" name="character[class_name]" value= "<%=class_name%>">
 <%end%>
 <br>
+<i>(Previously <%=@character.class_name%>)</i>
+<br>
 <br>
 
-<label>Race:</label>
+<b><label>Race:</label></b>
 <br>
 <%@races.each do |race|%>
 <label for="<%race%>"><%=race%></label>
 <input type="radio" id="race" name="character[race]" value= "<%=race%>">
 <%end%>
 <br>
+<i>(Previously <%=@character.race%>)</i>
+<br>
 <br>
 
-<label>Special Abilities:</label>
+<b><label>Special Abilities:</label></b>
 <input type="text" id="race" name="character[special_abilities]" value="<%=@character.special_abilities%>">
 <br><br>
 
-<label>Description:</label>
+<b><label>Description:</label></b>
 <textarea rows="4" cols="50" id="description" name=character[description]>
 </textarea><br>
 <br><br>
