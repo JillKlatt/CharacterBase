@@ -10,10 +10,12 @@
     <h2>Your Adventure is Waiting for You!</h2>
     <br>
 
+
+<%if !logged_in?%>
    <a button type="button" class="btn btn-primary btn-lg" href="/login">Login</button></a>
    
   <a button type="button" class="btn btn-primary btn-lg" href="/create_user">Sign Up</button></a>
-
+<%end%>
     </body>
 
         <div class="content"></div>

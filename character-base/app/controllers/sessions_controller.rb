@@ -16,6 +16,7 @@ class SessionsController < ApplicationController
                 redirect '/characters'
             else
                 #False (Flash message, incorrect password)
+                #flash[:error] = "#{user.errors.full_messages.join(", ")}"
                 redirect '/login'
             end
     end
